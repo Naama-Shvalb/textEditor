@@ -17,7 +17,7 @@ export const Keyboard = ({ onKeyClick }) => {
         ['ש', 'ד', 'ג', 'כ', 'ע', 'י', 'ח', 'ל', 'ך', 'ף', ',', 'ֿ', '⏎'],
         [';', 'ז', 'ס', 'ב', 'ה', 'נ', 'מ', 'צ', 'ת', 'ץ', '.'],
         [' ']
-];
+    ];
 
     const [activeLang, setActiveLang] = useState('english');
 
