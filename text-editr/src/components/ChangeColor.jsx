@@ -6,17 +6,17 @@ export const ChangeColor = () => {
     const handleClick = (color) => {
         setCurrentColor(color);
     }
-    textManager.activeColor == currentColor;
-  
+    textManager.setActiveColor(currentColor);
+
     return <>
     <button onClick={() => handleClick('red')}>
         {"red"}
-      </button>
-    {/* // <button onClick={handleClick('yellow')}>
-    //     {"yellow"}
-    // </button>
-    // <button onClick={handleClick('black')}>
-    //     {"black"}
-    // </button> */}
+    </button>
+    <button onClick={() => handleClick('yellow')}>
+        {"yellow"}
+    </button>
+    <button onClick={() => handleClick('black')}>
+        {"black"}
+    </button>
     </>
 }

@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import { Keyboard } from './components/keyboard'
 import { TextView } from './components/TextView'
-import { ChangeColor } from './components/changeColor'
+import { ChangeColor } from './components/ChangeColor'
 
 
 function App() {
