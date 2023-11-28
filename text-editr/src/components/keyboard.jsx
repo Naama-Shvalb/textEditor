@@ -43,7 +43,7 @@ export const Keyboard = ({ onKeyClick }) => {
         <div>
         {activeKeyboard[2].map((char, index) => (
             <KeyboardKey char={char} onKeyClick = {onKeyClick} />
-        ))}
+            ))}
         </div>
         <div>
         {activeKeyboard[3].map((char, index) => (

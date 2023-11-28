@@ -1,21 +1,16 @@
-import {presentChars} from '../char'
+import {textManager} from '../TextManager'
 
-export const KeyboardKey = ({char, onKeyClick}) => {
+export const KeyboardKey = ({ char, onKeyClick}) => {
 
     const handleClick = () => {
-        onKeyClick(() =>{
-            //console.log('prev', prev)
-            if (char === '⌫') {
-                presentChars.pop();
-            } 
-            if(char == '⏎'){
-                presentChars + "\n";
-            }else {
-                 
-                console.log('presentChars', presentChars)
-                presentChars.push(char);
-            }            
-        });
+        if( char === '⌫'){
+            textManager.chars.pop();
+       }
+       else{
+        textManager.addChar(char);
+       }
+        console.log('textBox', textManager);
+        onKeyClick(Math.random());
     }
 
     return (<button onClick = {handleClick}>{char}</button>);
