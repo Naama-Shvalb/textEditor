@@ -7,7 +7,7 @@ export const TextView = () => {
            if(c.value === '⏎'){
             return '\n';
            }
-           return <span style={{color:c.color}}>{c.value}</span>;
+           return <span style={{color: c.color}}>{c.value}</span>;
            })}
         </>
     )

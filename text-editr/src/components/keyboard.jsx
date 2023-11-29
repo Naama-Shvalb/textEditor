@@ -19,14 +19,38 @@ export const Keyboard = ({ onKeyClick }) => {
         [' ']
     ];
 
+    const emojis = [['😀', '😄', '😁', '😆', '😅', '🤣', '😂', '🙂', '🙃', '😉', '⌫'],
+        ['😊', '😇', '🥰', '😍', '🤩', '😘', '😗', '😚', '😙', '😋', '😛', '😜', '🤪', '⏎'],
+        ['😝', '🤑', '🤗', '🤭', '🤫', '🤔', '😪', '🤤', '😴', '😷', '🤒', '🤕',  '😎'],
+        [' ']
+    ];
+
     const [activeLang, setActiveLang] = useState('english');
 
 
     const handleClick = () => {
-        setActiveLang(activeLang === 'hebrew' ? 'english': 'hebrew');
+        if(activeLang==='english'){
+            setActiveLang('hebrew');
+        }else if(activeLang === 'hebrew'){
+            setActiveLang('😀')
+        }else{
+            setActiveLang('english');
+        }
     }
 
-    const activeKeyboard = activeLang === 'hebrew' ? hebrew : english;
+
+    const setActiveKeyboard =()=>{
+        if(activeLang=== 'hebrew'){
+            return hebrew;
+        }
+        if(activeLang === 'english'){
+            return english;
+        }
+        return emojis;
+        
+    } 
+
+    const activeKeyboard = setActiveKeyboard();
   
   return (
     <div className="keyboard">

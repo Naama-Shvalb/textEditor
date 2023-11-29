@@ -18,5 +18,8 @@ export const ChangeColor = () => {
     <button onClick={() => handleClick('black')}>
         {"black"}
     </button>
+    <button onClick={() => handleClick('blue')}>
+        {"blue"}
+    </button>
     </>
 }
