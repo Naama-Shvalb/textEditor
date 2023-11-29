@@ -4,7 +4,9 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import { Keyboard } from './components/keyboard'
 import { TextView } from './components/TextView'
-import { ChangeColor } from './components/ChangeColor'
+import { ChangeStyle } from './components/ChangeStyle'
+import { ChangeAll } from './components/changeAll'
+import { textManager } from './TextManager'
 
 
 function App() {
@@ -13,14 +15,14 @@ function App() {
   console.log('app render')
 
 
-
   return (
     <>
       <pre><TextView /></pre>
       <Keyboard language={'Hebrew'} onKeyClick={setClickedChar} />
-      <div><ChangeColor/></div>
+      <div><ChangeStyle/></div>
+      <div><ChangeAll/></div>
     </>
   )
-}
+}  
 
 export default App

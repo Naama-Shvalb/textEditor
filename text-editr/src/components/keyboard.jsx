@@ -6,13 +6,13 @@ import { KeyboardKey } from './KeyboardKey';
 
 export const Keyboard = ({ onKeyClick }) => {
 
-    const hebrew = [
+    const english = [
         ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', '⌫'],
-        ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';', "'", '\\', '⏎'],
+        ['CL','a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';', "'", '\\', '⏎'],
         ['`', 'z', 'x', 'c', 'v', 'b', 'n', 'm', ',', '.', '/'],
         [' ']
     ];
-    const english = [
+    const hebrew = [
         ['/', '׳', 'ק', 'ר', 'א', 'ט', 'ו', 'ן', 'ם', 'פ', '⌫'],
         ['ש', 'ד', 'ג', 'כ', 'ע', 'י', 'ח', 'ל', 'ך', 'ף', ',', 'ֿ', '⏎'],
         [';', 'ז', 'ס', 'ב', 'ה', 'נ', 'מ', 'צ', 'ת', 'ץ', '.'],
@@ -27,29 +27,25 @@ export const Keyboard = ({ onKeyClick }) => {
 
     const [activeLang, setActiveLang] = useState('english');
 
-
     const handleClick = () => {
-        if(activeLang==='english'){
+        if (activeLang === 'english') {
             setActiveLang('hebrew');
-        }else if(activeLang === 'hebrew'){
-            setActiveLang('😀')
-        }else{
+        } else if (activeLang === 'hebrew') {
+            setActiveLang('emojis');
+        } else {
             setActiveLang('english');
         }
-    }
+    };
 
-
-    const setActiveKeyboard =()=>{
-        if(activeLang=== 'hebrew'){
-            return hebrew;
-        }
-        if(activeLang === 'english'){
+    const setActiveKeyboard = () => {
+        if (activeLang === 'english') {
             return english;
         }
+        if (activeLang === 'hebrew') {
+            return hebrew;
+        }
         return emojis;
-        
-    } 
-
+    };
     const activeKeyboard = setActiveKeyboard();
   
   return (
@@ -76,7 +72,7 @@ export const Keyboard = ({ onKeyClick }) => {
         </div>
         <div>
             <button onClick = {handleClick}>
-                {activeLang}
+            {activeLang === 'english' ? 'עברית' : activeLang === 'hebrew' ? '😀' : 'English'}
             </button>
         </div>
     </div>
