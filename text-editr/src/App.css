@@ -44,3 +44,8 @@
 .keboard{
   font-size: medium;
 }
+ .key{
+  margin: 1px;
+  border: 0.3px;
+ }
+ 

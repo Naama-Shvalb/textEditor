@@ -30,10 +30,10 @@ export const ChangeStyle = () => {
     </div>
     <div>
     <button onClick={() => handleSize(1)}>
-        {"plusSize"}
+        {'+'}
     </button>
     <button onClick={() => handleSize(-1)}>
-        {"minusSize"}
+        {'-'}
     </button>
     </div>
     

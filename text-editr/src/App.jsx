@@ -20,7 +20,7 @@ function App() {
       <pre><TextView /></pre>
       <Keyboard language={'Hebrew'} onKeyClick={setClickedChar} />
       <div><ChangeStyle/></div>
-      <div><ChangeAll/></div>
+      <ChangeAll onChangeAll = {setClickedChar}/>
     </>
   )
 }  

@@ -17,6 +17,6 @@ export const KeyboardKey = ({ char, onKeyClick}) => {
 
     }
 
-    return (<button onClick = {handleClick}>{char}</button>);
+    return (<button className = "key" onClick = {handleClick}>{char}</button>);
 
 };
