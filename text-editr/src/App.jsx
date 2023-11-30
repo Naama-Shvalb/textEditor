@@ -5,13 +5,14 @@ import './App.css'
 import { Keyboard } from './components/keyboard'
 import { TextView } from './components/TextView'
 import { ChangeStyle } from './components/ChangeStyle'
-import { ChangeAll } from './components/changeAll'
+import { ChangeAll } from './components/ChangeAll'
 import { textManager } from './TextManager'
 
 
 function App() {
-  //const [count, setCount] = useState(0)
   const [clickedChar, setClickedChar] = useState('');
+  //const [currentUpperCase, setCurrentUpperCase] = useState(false);
+
   console.log('app render')
 
 
@@ -24,5 +25,5 @@ function App() {
     </>
   )
 }  
-
+export const previousChars = new Array();
 export default App

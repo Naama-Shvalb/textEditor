@@ -11,8 +11,16 @@ export const KeyboardKey = ({ char, onKeyClick}) => {
         textManager.addChar(char);
        }
         console.log('textBox', textManager);
+
+        ///
         onKeyClick(Math.random());
-        textManager.previousChars.push(textManager.chars);
+        let a=[];
+        textManager.chars.map((char,index)=>{
+            a[index] = char;
+        })
+        App.previousChars.push(a);
+        /////
+        //textManager.previousChars.push(textManager.chars);
         console.log("prev",textManager.previousChars);
 
     }

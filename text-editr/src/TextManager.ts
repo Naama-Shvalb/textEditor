@@ -2,13 +2,11 @@ export class TextElement {
     value: string;
     size: number;
     color: string;
-    upperCase: boolean;
 
-    constructor({value, size, color, upperCase}) {
+    constructor({value, size, color}) {
         this.value = value;
         this.size = size;
         this.color = color;
-        this.upperCase = upperCase;
     }
 }
 
@@ -27,7 +25,6 @@ export class TextManager {
             value: char,
             size: this.activeSize,
             color: this.activeColor,
-            upperCase: this.upperCase
         })
        this.chars.push(charObj);
        this.previousChars.push(this.chars);
