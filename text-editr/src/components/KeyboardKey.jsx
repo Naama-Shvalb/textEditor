@@ -1,8 +1,10 @@
+/* eslint-disable react/prop-types */
 import {textManager} from '../TextManager'
 
-export const KeyboardKey = ({ char, onKeyClick}) => {
+export const KeyboardKey = ({ keyCode, char, onKeyClick}) => {
 
     const handleClick = () => {
+
         if( char === '⌫'){
             textManager.chars.pop();
        }else if(char === 'CL'){
@@ -12,19 +14,12 @@ export const KeyboardKey = ({ char, onKeyClick}) => {
        }
         console.log('textBox', textManager);
 
-        ///
         onKeyClick(Math.random());
-        let a=[];
-        textManager.chars.map((char,index)=>{
-            a[index] = char;
-        })
-        App.previousChars.push(a);
-        /////
-        //textManager.previousChars.push(textManager.chars);
+        
         console.log("prev",textManager.previousChars);
 
     }
 
-    return (<button className = "key" onClick = {handleClick}>{char}</button>);
+    return (<button className = {keyCode} onClick = {handleClick} >{char}</button>);
 
 };

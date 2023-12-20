@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import {textManager} from '../TextManager'
 
 export const ChangeStyle = () => {
@@ -15,16 +14,16 @@ export const ChangeStyle = () => {
 
     return <>
     <div>
-    <button onClick={() => handleColor('red')}>
+    <button  className='redBtn' onClick={() => handleColor('red')}>
         {"red"}
     </button>
-    <button onClick={() => handleColor('yellow')}>
+    <button className='yelowBtn' onClick={() => handleColor('yellow')}>
         {"yellow"}
     </button>
-    <button onClick={() => handleColor('black')}>
+    <button className='blackBtn' onClick={() => handleColor('black')}>
         {"black"}
     </button>
-    <button onClick={() => handleColor('blue')}>
+    <button className='blueBtn' onClick={() => handleColor('blue')}>
         {"blue"}
     </button>
     </div>

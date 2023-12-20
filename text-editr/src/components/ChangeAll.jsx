@@ -1,31 +1,49 @@
-import React, { useState } from 'react';
+import React,{ useState } from 'react';
 import {textManager} from '../TextManager'
 
 
 export const ChangeAll = ({onChangeAll}) => {
 
     const handleUpperCase = (current) => {
-            onChangeAll(Math.random());
+            textManager.copyPrevious();
             if(current){
-                textManager.chars.map((char, index)=>{
-                    char.value=char.value.toUpperCase();
-                })
+                changeToUpper();
             } else {
-                textManager.chars.map((char, index)=>{
-                    char.value=char.value.toLowerCase();
-                })
+                changeToLower();
             }
-        }
+    }
+        
+    const changeToUpper = () => {
+        onChangeAll(Math.random());
+        textManager.chars.map((char)=>{
+            char.value=char.value.toUpperCase();
+        })
+    }
+
+    const changeToLower = () => {
+        onChangeAll(Math.random());
+        textManager.chars.map((char)=>{
+            char.value=char.value.toLowerCase();
+        })
+    }
 
     const handleRemove = () => {
         onChangeAll(Math.random());
         textManager.chars=[];
     }
 
+    const handleUndo = () =>{
+        onChangeAll(Math.random());
+        textManager.chars = textManager.Undo();
+        console.log("chars now:",textManager.chars);
+
+    }
+
     return (<>
         <button onClick={()=>handleUpperCase(true)}>UPPER CASE</button>
         <button onClick={()=>handleUpperCase(false)}>lower case</button>
         <button onClick={()=>handleRemove()}>REMOVE ALL</button>
+        <button onClick={()=>handleUndo()}>Undo</button>
     </>
     )
 }

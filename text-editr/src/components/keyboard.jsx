@@ -1,9 +1,11 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
 import { KeyboardKey } from './KeyboardKey';
 
 
 
 
+// eslint-disable-next-line react/prop-types
 export const Keyboard = ({ onKeyClick }) => {
 
     const english = [
@@ -55,28 +57,28 @@ export const Keyboard = ({ onKeyClick }) => {
   return (
     <div className="keyboard">
         <div>
-        {activeKeyboard[0].map((char, index) => (
-            <KeyboardKey char = {char} onKeyClick = {onKeyClick} />
+        {activeKeyboard[0].map((char) => (
+            <KeyboardKey key = {char} keyCode = {char} char = {char} onKeyClick = {onKeyClick} />
         ))}
         </div>
         <div>
-        {activeKeyboard[1].map((char, index) => (
-            <KeyboardKey char = {char} onKeyClick = {onKeyClick}/>
+        {activeKeyboard[1].map((char) => (
+            <KeyboardKey  key = {char} keyCode = {char} char = {char} onKeyClick = {onKeyClick}/>
         ))}
         </div>
         <div>
-        {activeKeyboard[2].map((char, index) => (
-            <KeyboardKey char={char} onKeyClick = {onKeyClick} />
+        {activeKeyboard[2].map((char) => (
+            <KeyboardKey key = {char} keyCode = {char} char={char} onKeyClick = {onKeyClick} />
             ))}
         </div>
         <div>
-        {activeKeyboard[3].map((char, index) => (
-            <KeyboardKey char={char} onKeyClick = {onKeyClick} />
+        {activeKeyboard[3].map((char) => (
+            <KeyboardKey key = {char} keyCode = {char} char={char} onKeyClick = {onKeyClick} />
         ))}
         </div>
         <div>
-        {activeKeyboard[4].map((char, index) => (
-            <KeyboardKey char = {char} onKeyClick = {onKeyClick} />
+        {activeKeyboard[4].map((char) => (
+            <KeyboardKey key = {char} keyCode = "space" char = {char} onKeyClick = {onKeyClick} />
         ))}
         </div>
         <div>

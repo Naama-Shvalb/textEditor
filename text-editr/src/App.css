@@ -11,9 +11,11 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -41,6 +43,12 @@
   color: #888;
 }
 
+.textView{
+  min-height: 90px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
 .keboard{
   font-size: medium;
 }
@@ -48,4 +56,27 @@
   margin: 1px;
   border: 0.3px;
  }
- 
+
+ .space{
+  width: 200px;
+  height: 30px;
+  border-color: black;
+ }
+
+ .redBtn{
+  background-color: red;
+ }
+
+ .yelowBtn{
+  background-color: yellow;
+ }
+
+ .blackBtn{
+  background-color: black;
+  color: aliceblue;
+ }
+
+ .blueBtn{
+  background-color:darkblue;
+  color: aliceblue;
+ }
