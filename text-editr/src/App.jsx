@@ -4,16 +4,9 @@ import { Keyboard } from './components/keyboard'
 import { TextView } from './components/TextView'
 import { ChangeStyle } from './components/ChangeStyle'
 import { ChangeAll } from './components/ChangeAll'
-import { textManager } from './TextManager'
-
 
 function App() {
   const [clickedChar, setClickedChar] = useState('');
-
-
-  console.log('app render')
-
-
   return (
     <>
       <pre className='textView' ><TextView /></pre>
@@ -23,5 +16,4 @@ function App() {
     </>
   )
 }  
-//export const previousChars = new Array();
 export default App

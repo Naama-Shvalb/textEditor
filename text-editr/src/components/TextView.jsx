@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-key */
 import {textManager} from '../TextManager'
 
 export const TextView = () => {

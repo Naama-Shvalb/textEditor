@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import {textManager} from '../TextManager'
 
 export const KeyboardKey = ({ keyCode, char, onKeyClick}) => {

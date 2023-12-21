@@ -34,12 +34,7 @@ export class TextManager {
         const copiedChars = this.deepCopyTextElements(this.chars);
         this.previousChars.push(copiedChars);
       }
-    
-    
-    // copyPrevious() {
-    //   const copiedChars = this.chars.map((char)=>char);
-    //    this.previousChars.push(copiedChars);
-    // }
+ 
 
     Undo(): TextElement[]{
       const tempChars = this.previousChars[this.previousChars.length - 2];

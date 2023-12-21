@@ -1,16 +1,13 @@
 import {textManager} from '../TextManager'
 
 export const ChangeStyle = () => {
-    //const [currentColor, setCurrentColor] = useState('black');
     const handleColor = (color) => {
-        //setCurrentColor(color);
         textManager.setActiveColor(color)
     }
 
     const handleSize = (size) => {
         textManager.setActiveSize(size);
     }
-    //textManager.setActiveColor(currentColor);
 
     return <>
     <div>
